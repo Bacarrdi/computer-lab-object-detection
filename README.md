@@ -198,3 +198,9 @@ The project was subsequently revisited for partial refactoring, interface improv
 **Academic prototype — local demonstration.**
 
 The repository is published to document the development process, technical decisions, limitations, and learning outcomes of an early university computer vision project.
+
+## License
+
+This project uses [Ultralytics YOLO](https://github.com/ultralytics/ultralytics), which is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
+
+The project is distributed under the AGPL-3.0 license. See the [LICENSE](LICENSE) file for details.
