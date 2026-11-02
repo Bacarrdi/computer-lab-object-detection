@@ -1,0 +1,217 @@
+.drag-area {
+    border: 4px dashed #ccc;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.drag-area.active {
+    background-color: #e3f2fd;
+    border-color: #1976d2;
+}
+
+.drag-area h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.drag-area span {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #666;
+}
+
+.drag-area button {
+    padding: 10px 20px;
+    background-color: #5256ad;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.drag-area button:hover {
+    background-color: #4347a0;
+}
+
+#preview {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 700px;
+}
+
+.file-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: solid 1px #ddd;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.status-text {
+    padding: 0 10px;
+}
+
+.success {
+    color: #52ad5a;
+}
+
+.failure {
+    color: #ff0000;
+}
+
+.title {
+    color: #5e3131;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#detect-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #5256ad;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#detect-btn:hover {
+    background-color: #4347a0;
+}
+
+.file-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye texto y botón */
+    gap: 10px;
+    padding: 10px 15px;
+    border: solid 1px #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.delete-btn {
+    padding: 6px 14px;
+    background-color: #e74c3c;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: auto;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.btn-upload {
+    display: inline-block;
+    background-color: #665bb7;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.btn-upload:hover {
+    background-color: #574a9f;
+}
+
+
+#preview .file-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+    padding: 15px;
+}
+
+.preview-image-m1 {
+    width: 160px;
+    height: 110px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #f5f5f5;
+}
+
+.file-details-m1 {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+}
+
+#preview .status-text {
+    padding: 0;
+    color: #38734a;
+}
+
+#preview .delete-btn {
+    margin-left: auto;
+    background: white;
+    color: #34383d;
+    border: 1px solid #b9c1c7;
+    box-shadow: none;
+    flex-shrink: 0;
+}
+
+#preview .delete-btn:hover {
+    background: #edf0f2;
+}
+
+@media (max-width: 650px) {
+    #preview .file-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #preview .delete-btn {
+        margin-left: 0;
+    }
+}
+
+.m4-shell .upload-area {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.m4-shell #preview {
+    width: 100%;
+    max-width: none;
+    margin: 20px 0 0;
+}
+
+.m4-shell #preview:empty {
+    display: none;
+}
+
+.m4-shell #preview .file-container {
+    margin: 0;
+}

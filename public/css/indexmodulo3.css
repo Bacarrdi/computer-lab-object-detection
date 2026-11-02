@@ -1,0 +1,53 @@
+.title {
+    color: #333;
+}
+
+.graficos-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 25px auto;
+    align-items: start;
+}
+
+.grafico {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 18px;
+    min-width: 0;
+}
+
+.grafico h3 {
+    text-align: center;
+    margin: 0 0 15px;
+    font-size: 18px;
+}
+
+.grafico-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.grafico-descripcion {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.nota-estadistica {
+    max-width: 1000px;
+    margin: 25px auto;
+    color: #666;
+    font-size: 13px;
+}
+
+@media (max-width: 900px) {
+    .graficos-container {
+        grid-template-columns: 1fr;
+    }
+}

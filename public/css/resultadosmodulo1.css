@@ -1,0 +1,163 @@
+.comparacion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin: 25px auto;
+    max-width: 1150px;
+    align-items: start;
+}
+
+.comparacion-panel {
+    min-width: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 18px;
+}
+
+.comparacion-panel h3 {
+    text-align: center;
+    margin: 0 0 18px;
+}
+
+.comparacion-panel img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    background: #f7f7f7;
+    border-radius: 6px;
+}
+
+.comparacion-detalle {
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.campos-manuales {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.campo-manual label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.campo-manual input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.conteo-lista {
+    list-style: none;
+    padding: 0;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.conteo-lista li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.comparacion-acciones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 25px 0 40px;
+}
+
+.comparacion-acciones button,
+.comparacion-acciones a {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+#guardar-comparacion-btn,
+#mostrar-estadisticas {
+    background: #34383d;
+    color: #fff;
+    border: 1px solid #34383d;
+}
+
+#guardar-comparacion-btn:hover,
+#mostrar-estadisticas:hover {
+    background: #24272b;
+}
+
+#volver-btn {
+    background: #fff;
+    color: #34383d;
+    border: 1px solid #a9adb2;
+}
+
+#volver-btn:hover {
+    background: #f0f0f0;
+}
+
+.graficos-actuales {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin: 25px auto;
+}
+
+.graficos-actuales[hidden] {
+    display: none;
+}
+
+.graficos-actuales img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.comparacion-acciones [hidden] {
+    display: none;
+}
+
+
+.objetos-no-detectados {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid #dde2e6;
+}
+
+.objetos-no-detectados summary {
+    color: #41677D;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.objetos-no-detectados p {
+    margin: 14px 0;
+    color: #64717B;
+    font-size: 13px;
+}
+
+.objetos-no-detectados .campos-manuales {
+    margin-top: 16px;
+}
+
+@media (max-width: 800px) {
+    .graficos-actuales {
+        grid-template-columns: 1fr;
+    }
+}

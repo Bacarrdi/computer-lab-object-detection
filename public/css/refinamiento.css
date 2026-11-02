@@ -1,0 +1,398 @@
+:root {
+    --color-texto: #28313a;
+    --color-secundario: #65717c;
+    --color-boton: #343c44;
+    --color-boton-hover: #252d34;
+    --color-borde: #d8dde1;
+}
+
+/* Estructura general */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-texto);
+}
+
+.sidebar {
+    background: #222528;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    align-self: start;
+}
+
+.menu-title {
+    font-size: 14px;
+    letter-spacing: .05em;
+    margin: 8px 0 24px;
+}
+
+.menu-item {
+    margin-bottom: 4px;
+}
+
+.opcion-menu {
+    border-radius: 4px;
+    padding: 11px 12px;
+    font-size: 14px;
+    color: #d5dbe0;
+    border-left: 3px solid transparent;
+}
+
+.opcion-menu:hover {
+    background: #30363b;
+    color: white;
+}
+
+.opcion-menu.activo {
+    background: #343b41;
+    color: white;
+    border-left-color: #8da8b8;
+    font-weight: 600;
+}
+
+.main-panel {
+    background: #f5f5f5;
+    padding: 28px 30px;
+}
+
+.main-panel .title,
+.main-panel .m4-shell h1 {
+    color: var(--color-texto);
+    font-size: 30px;
+    line-height: 1.25;
+    letter-spacing: -.02em;
+}
+
+.footer-global {
+    background: #1b1e21;
+    color: #d4d9de;
+    font-size: 12px;
+}
+
+/* Botones principales */
+
+.main-panel #detect-btn,
+.main-panel #guardar-comparacion-btn,
+.main-panel #mostrar-estadisticas,
+.main-panel .btn-primary {
+    background: var(--color-boton);
+    border: 1px solid var(--color-boton);
+    color: white;
+    border-radius: 5px;
+    font-weight: 500;
+    box-shadow: none;
+    transition: background .15s ease;
+}
+
+.main-panel #detect-btn:hover,
+.main-panel #guardar-comparacion-btn:hover,
+.main-panel #mostrar-estadisticas:hover,
+.main-panel .btn-primary:hover {
+    background: var(--color-boton-hover);
+    box-shadow: none;
+    transform: none;
+}
+
+.main-panel .btn-upload,
+.main-panel #upload-btn {
+    background: var(--color-boton);
+    color: white;
+    border: 1px solid var(--color-boton);
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.main-panel .btn-upload:hover,
+.main-panel #upload-btn:hover {
+    background: var(--color-boton-hover);
+}
+
+.main-panel #volver-btn,
+.main-panel .m4-back,
+.main-panel .m4-remove {
+    background: white;
+    color: var(--color-texto);
+    border: 1px solid #b9c1c7;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.main-panel #volver-btn:hover,
+.main-panel .m4-back:hover,
+.main-panel .m4-remove:hover {
+    background: #edf0f2;
+}
+
+/* Control por voz */
+
+.sidebar #voice-toggle-btn,
+.main-panel #voice-toggle-btn {
+    background: #3c4750;
+    color: white;
+    border: 1px solid #64717c;
+    border-radius: 5px;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 11px 16px;
+    cursor: pointer;
+    transition: background .15s ease;
+}
+
+.sidebar #voice-toggle-btn:hover,
+.main-panel #voice-toggle-btn:hover {
+    background: #4b5862;
+    box-shadow: none;
+}
+
+.sidebar #voice-toggle-btn.active,
+.main-panel #voice-toggle-btn.active {
+    background: #435e56 !important;
+    border-color: #64877b;
+    box-shadow: none !important;
+}
+
+.sidebar #voice-status,
+.main-panel #voice-status {
+    background: transparent !important;
+    border-radius: 0;
+    padding: 0;
+    color: #b8c1c8;
+    font-size: 12px;
+}
+
+.sidebar #voice-status.active,
+.main-panel #voice-status.active {
+    background: transparent !important;
+    color: #82bd9e !important;
+}
+
+.main-panel #voice-status {
+    color: #68747e;
+}
+
+.main-panel #voice-status.active {
+    color: #376d51 !important;
+}
+
+/* Comandos del módulo 2 */
+
+.main-panel .command-group {
+    display: grid;
+    grid-template-columns: minmax(160px, 220px) 1fr;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 0;
+    margin: 0;
+    border-bottom: 1px solid #eceeef;
+}
+
+.main-panel .command-badge {
+    display: inline-block;
+    border-radius: 4px;
+    background: #f0f2f3;
+    border: 1px solid #e1e5e8;
+    box-shadow: none;
+    padding: 7px 9px;
+    font-size: 13px;
+    white-space: normal;
+}
+
+.main-panel .command-description {
+    margin: 0;
+    color: #64717b;
+    font-size: 13px;
+}
+
+.main-panel .card {
+    box-shadow: none;
+    border: 1px solid var(--color-borde);
+}
+
+.main-panel .card-header {
+    background: #f8f9fa;
+    color: var(--color-texto);
+}
+
+/* Eliminar iconos externos mal renderizados */
+
+#voice-toggle-btn i,
+.main-panel .fas,
+.main-panel .far,
+.main-panel .fab,
+.main-panel .fa {
+    display: none;
+}
+
+/* Comandos del sidebar */
+
+.sidebar #voice-commands {
+    border-top: 1px solid #41484e;
+    margin-top: 18px;
+    padding-top: 14px;
+}
+
+.sidebar #voice-commands[hidden] {
+    display: none;
+}
+
+.sidebar #voice-commands h4 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #e4e8eb;
+}
+
+.sidebar #voice-commands ul {
+    padding-left: 18px;
+    font-size: 12px;
+    line-height: 2;
+    color: #c2cbd1;
+}
+
+/* Pantallas pequeñas */
+
+@media (max-width: 760px) {
+    .sidebar {
+        position: static;
+        height: auto;
+        overflow: visible;
+        width: 100%;
+    }
+
+    .main-panel {
+        padding: 20px 16px;
+    }
+
+    .main-panel .title,
+    .main-panel .m4-shell h1 {
+        font-size: 25px;
+    }
+
+    .main-panel .command-group {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+}
+
+/* Colores principales */
+
+:root {
+    --navy: #142B45;
+    --navy-hover: #0C1E30;
+
+    --steel: #41677D;
+    --steel-hover: #345366;
+
+    --green: #236448;
+    --green-hover: #1A4F39;
+
+    --light-gray: #E5E7EB;
+    --light-gray-hover: #D5DAE0;
+}
+
+/* Botones de detección */
+
+.main-panel #detect-btn,
+.main-panel #guardar-comparacion-btn,
+.main-panel #mostrar-estadisticas {
+    background: var(--navy) !important;
+    border: 1px solid var(--navy) !important;
+    color: white !important;
+    box-shadow: none;
+}
+
+.main-panel #detect-btn:hover,
+.main-panel #guardar-comparacion-btn:hover,
+.main-panel #mostrar-estadisticas:hover {
+    background: var(--navy-hover) !important;
+    border-color: var(--navy-hover) !important;
+}
+
+/* Selección de imágenes */
+
+.main-panel #upload-btn,
+.main-panel .btn-upload,
+.main-panel .m4-file-input::file-selector-button {
+    background: var(--steel) !important;
+    border: 1px solid var(--steel) !important;
+    color: white !important;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.main-panel #upload-btn:hover,
+.main-panel .btn-upload:hover,
+.main-panel .m4-file-input::file-selector-button:hover {
+    background: var(--steel-hover) !important;
+    border-color: var(--steel-hover) !important;
+}
+
+/* Activación de voz */
+
+.sidebar #voice-toggle-btn,
+.main-panel #voice-toggle-btn {
+    background: var(--green) !important;
+    border: 1px solid var(--green) !important;
+    color: white !important;
+    box-shadow: none !important;
+    border-radius: 5px;
+}
+
+.sidebar #voice-toggle-btn:hover,
+.main-panel #voice-toggle-btn:hover {
+    background: var(--green-hover) !important;
+}
+
+.sidebar #voice-toggle-btn.active,
+.main-panel #voice-toggle-btn.active {
+    background: #874B43 !important;
+    border-color: #874B43 !important;
+}
+
+/* Botones de regreso */
+
+.main-panel #volver-btn,
+.main-panel .m4-back {
+    background: var(--light-gray) !important;
+    border: 1px solid #C7CDD3 !important;
+    color: #27313B !important;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.main-panel #volver-btn:hover,
+.main-panel .m4-back:hover {
+    background: var(--light-gray-hover) !important;
+}
+
+/* Eliminar imagen seleccionada */
+
+.main-panel .delete-btn,
+.main-panel .m4-remove {
+    background: #F1F2F4 !important;
+    border: 1px solid #C7CDD3 !important;
+    color: #343B43 !important;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.main-panel .delete-btn:hover,
+.main-panel .m4-remove:hover {
+    background: #E5E7EB !important;
+}
+
+/* Navegación del sidebar */
+
+.sidebar .opcion-menu {
+    border-left: none !important;
+    padding-left: 15px;
+}
+
+.sidebar .opcion-menu.activo {
+    background: #353C42;
+    color: #FFFFFF;
+    border-left: none !important;
+    font-weight: 600;
+}

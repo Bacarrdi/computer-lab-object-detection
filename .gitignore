@@ -1,0 +1,75 @@
+# Archivos locales y datos generados
+*.sqlite
+*.sqlite-*
+*.pyc
+__pycache__/
+.venv/
+venv/
+
+# Imagenes subidas y resultados
+/archivos_yolo/archivos_subidos/
+/archivos_yolo/resultados/
+/public/archivos_yolo/originales/
+/public/archivos_yolo/resultados/
+/public/archivos_yolo/estadisticas/
+/archivos_yolo/estadisticas/individuales/
+/archivos_yolo/estadisticas/*.lock
+
+# Estadisticas
+/archivos_yolo/estadisticas/*.csv
+/storage/app/*.csv
+
+# Archivos temporales
+*.log
+*.bak
+*.zip
+*.7z
+
+# Laravel y dependencias
+.env
+.env.*
+!.env.example
+/vendor/
+/node_modules/
+/public/build/
+/public/hot/
+/public/storage/
+/storage/*.key
+/auth.json
+/.phpunit.cache
+/.phpunit.result.cache
+
+# Configuracion local de editores
+/.vscode/
+/.idea/
+/.fleet/
+/.zed/
+
+# Fotografías, capturas y videos
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.gif
+*.bmp
+*.tif
+*.tiff
+*.heic
+*.mp4
+*.mov
+
+# Datos generados por la aplicación
+/archivos_yolo/archivos_subidos/
+/archivos_yolo/resultados/
+/archivos_yolo/estadisticas/
+/public/archivos_yolo/
+/storage/app/private/
+/storage/app/public/
+
+# Entrenamiento original (conservar localmente)
+/archivos_yolo/my_model/train/
+
+# Cache de Python
+__pycache__/
+*.pyc
+*.pyo

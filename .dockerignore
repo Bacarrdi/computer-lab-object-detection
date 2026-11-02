@@ -1,0 +1,55 @@
+# Git
+.git/
+.gitignore
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Installed dependencies
+vendor/
+node_modules/
+
+# Local databases
+*.sqlite
+*.sqlite-journal
+
+# Generated files
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+
+# Uploaded images and generated results
+archivos_yolo/archivos_subidos/
+archivos_yolo/resultados/
+public/archivos_yolo/resultados/
+public/uploads_detect/
+public/detections/
+
+# Python temporary files
+__pycache__/
+*.pyc
+.venv/
+
+# Datos de ejecución y estadísticas
+archivos_yolo/estadisticas/
+public/archivos_yolo/
+storage/app/private/
+storage/app/public/
+
+# Artefactos del entrenamiento
+archivos_yolo/my_model/train/
+
+# Entornos y archivos temporales
+venv/
+**/__pycache__/
+**/*.pyc
+
+# Imágenes y videos de prueba
+**/*.jpg
+**/*.jpeg
+**/*.png
+**/*.webp
+**/*.mp4
